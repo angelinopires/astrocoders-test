@@ -62,7 +62,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name].bundle.css"
+      filename: "css/[name]-bundle.css"
     }),
     new webpack.LoaderOptionsPlugin({
       options: {

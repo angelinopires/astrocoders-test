@@ -1,0 +1,19 @@
+#gmail {
+    display: flex;
+    flex-wrap: wrap; 
+    
+    aside {
+        background-color: purple;
+        color: white;
+        width: 15vw;
+    }
+    .header {
+        width: 100%;
+        background-color: yellow;
+    }
+    .emails {
+        background-color: blueviolet;
+        width: calc(100% - 15vw);
+        height: 50vh;
+    }   
+}
