@@ -9,7 +9,7 @@ This is a test of Astrocoders. I was challenge to build a sort of a Gmail applic
 
 ## Setup
 
-While I'm developing this test, I'm using two servers. One backe-end Client to make the requisition to Twitter's API; And the another to develop on Front-end (Webpack Server). 
+While I'm developing this test, I'm using two servers. One back-end Client to make the requisition to Twitter's API; And the another to develop Front-end (Webpack Server). 
 
 - To run the back-end Server: `` cd Server; npm install; npm start ``
 
