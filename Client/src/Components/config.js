@@ -3,5 +3,5 @@ module.exports = {
     accessTokenSecret: "5FjHgt6cmOQLEZHu6BPvaQGE4jLYZ03taiK9E4vfHULwR",
     consumerKey: "REdc6OFKmlRoGR7f1Lw9olGgr",
     consumerSecret: "BLKcbBm43kUz8fORvDkrLeRXD2r9JyC8SKYrs4JyR0HVFfs998",
-    callBackUrl: 'localhost'
+    callBackUrl: ''
 }
