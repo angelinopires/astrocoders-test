@@ -2,6 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './scss/main.scss'
 
-import EmailList from './Components/EmailList'
+import App from './Components/App'
 
-ReactDOM.render(<EmailList />, document.querySelector('.emails-list'))
+ReactDOM.render(<App />, document.querySelector('#app'))
