@@ -17,4 +17,4 @@ While I'm developing this test, I'm using two servers. One backe-end Client to m
 
 ### Still working
 
-<img src="https://media.giphy.com/media/5Zesu5VPNGJlm/giphy.gif" width="300" height="300">
+<img src="https://media.giphy.com/media/tn3kTJo4P4y1G/giphy.gif" width="300" height="300">
