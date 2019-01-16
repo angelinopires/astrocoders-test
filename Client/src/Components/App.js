@@ -1,42 +1,55 @@
-import React, { Component } from 'react'
+import React, { Component  from 'react'
 import axios from 'axios'
 import Header from './Header'
-import EmailList from './EmailList'
+import TweetList from './TweetsList'
+const R = require('ramda')
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
-            EmailList: [],
+            tweetList: [],
+            filteredTweetList: [],
             search: ''
         }
         this.handleChange = this.handleChange.bind(this)
+        this.filterTweets = this.filterTweets.bind(this)
     }
 
     componentDidMount() {
-        const hashtag = 'mars'
-        const count = 40
+        let hashtag = 'bolsonaro'
+        let count = 40
         const url = `http://localhost:3000/api/search/${hashtag}&${count}`
         
         axios.get(url)
-            .then(response => {
-                this.setState({EmailList: response.data.statuses})
-                console.log(this.state.EmailList)
-            })
+            .then(response => this.setState({ filteredTweetList: response.data.statuses }))
+            .then(() => this.setState({ tweetList: this.state.filteredTweetList }))
             .catch(error => console.log(error))
     }
 
     handleChange(event) {
         const {name, value} = event.target
         this.setState({ [name]: value })
+
+        return value
+    }
+
+    filterTweets(event) {
+        const value = this.handleChange(event)
+        
+        const filterTweet = tweet => R.includes(value, tweet.text)
+        const filteredTweets = R.filter(filterTweet, this.state.tweetList)
+        this.setState({ filteredTweetList: filteredTweets })
     }
 
     render() {
+        console.log(this.state.tweetList)
+
         return (
             <section id="gmail">
-                <Header handleChange={this.handleChange} />
+                <Header filterTweets={this.filterTweets} />
                 <aside className="menu">Menu</aside>
-                <EmailList emails={this.state.EmailList}/>
+                <TweetList tweets={this.state.filteredTweetList}/>
             </section>
         )
     }

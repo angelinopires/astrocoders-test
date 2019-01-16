@@ -8,8 +8,8 @@ const Header = props => {
                 <input 
                     type="Text"
                     name="search"
-                    placeholder="Search tweets by hashtag"
-                    onChange={props.handleChange} 
+                    placeholder="Search tweets by text"
+                    onChange={props.filterTweets} 
                 />
             </fieldset>
         </header>
@@ -17,39 +17,3 @@ const Header = props => {
 }
 
 export default Header
-
-// class Header extends Component {
-//     constructor() {
-//         super()
-//         this.state = {
-//             search: ""
-//         }
-
-//         this.handleChange = this.handleChange.bind(this)
-//     }
-
-//     handleChange(event) {
-//         const {name, value} = event.target
-//         this.setState({ [name]: value })
-
-//         return console.log(this.state.search)
-//     }
-
-//     render() {
-//         return (
-//             <header>
-//                 <fieldset>
-//                     <label>Filter your Messages:</label>
-//                     <input 
-//                         type="Text"
-//                         name="search"
-//                         placeholder="Search tweets by hashtag"
-//                         onChange={this.handleChange} 
-//                     />
-//                 </fieldset>
-//             </header>
-//         )
-//     }
-// }
-
-// export default Header
