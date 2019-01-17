@@ -2,7 +2,7 @@
   "name": "astrocoders",
   "version": "1.0.0",
   "description": "A test of Angelino Pires for astrocoders",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "watch": "webpack -w --mode development",
     "prod": "webpack -w --mode production",
@@ -13,11 +13,12 @@
   "dependencies": {
     "axios": "^0.18.0",
     "ramda": "^0.26.1",
-    "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2"
+    "react": "^16.8.0-alpha.0",
+    "react-dom": "^16.8.0-alpha.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.4.5",

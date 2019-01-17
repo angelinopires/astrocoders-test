@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tweet = props => { 
+export default function Tweet(props) { 
     let location = props.item.user.location ? props.item.user.location : 'No location'
     let date = new Date(props.item.created_at)
         .toLocaleDateString('en-US', { weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: 'numeric'})
@@ -14,5 +14,3 @@ const Tweet = props => {
         </li>
     )
 }
-
-export default Tweet

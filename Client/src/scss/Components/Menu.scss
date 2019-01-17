@@ -1,0 +1,42 @@
+.menu {
+    display: none;
+    width: 20%;
+    min-height: 90vh;
+    margin-top: 70px;
+    background: #D0D0D0;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    &__list {
+        margin-top: 2rem;
+        color: $black;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 5px 0 5px 10px;
+        margin: 0 10px 7px;
+        border: 1px solid $white;
+        border-radius: 0px 15px 15px 0px;
+        transition: .2s ease-in-out;
+
+        &--icon {
+            width: 30px;
+            margin-right: 10px;
+        }
+        &:hover {
+            background-color: $js-yellow;
+            transform: scale(1.1);
+            border-color: $black;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .menu {
+        display: block;
+    }
+}

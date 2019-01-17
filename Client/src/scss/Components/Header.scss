@@ -1,0 +1,73 @@
+.header {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    padding: 10px;
+    color: $black;
+    background-color: $light-grey;
+    z-index: 2;
+    
+    fieldset {
+        padding: 10px;
+        width: 100%;
+    }
+    &__input {
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        font-size: 1rem;
+        border: none;
+        border-radius: 7px;
+        transition: .05s all ease-in;
+
+        &:hover,
+        &:focus {
+            background-color: $js-yellow;
+            outline: none;
+            
+            &::placeholder {
+                color: $black;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 70px;
+
+        &__input {
+            width: 300px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        fieldset {
+            width: auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: $white;
+        border-bottom: .5px solid $light-grey;
+
+        &__input {
+            background-color: $light-grey;
+        }
+    }
+}

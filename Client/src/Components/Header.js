@@ -1,19 +1,20 @@
 import React from 'react'
 
-const Header = props => {
+export default function Header(props) {
     return (
-        <header>
+        <header className="header">
+            <figure className="header__logo">
+                <img src="img/gmail.png" />
+            </figure>
             <fieldset>
-                <label>Filter your Messages:</label>
                 <input 
-                    type="Text"
+                    type="text"
                     name="search"
+                    className="header__input"
                     placeholder="Search tweets by text"
-                    onChange={props.filterTweets} 
+                    onChange={props.handleSearch} 
                 />
             </fieldset>
         </header>
     )
 }
-
-export default Header
