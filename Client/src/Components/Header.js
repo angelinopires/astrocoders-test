@@ -7,6 +7,7 @@ export default function Header(props) {
                 <img src="img/gmail.png" />
             </figure>
             <fieldset>
+                <span><img src="img/icons/search.png"/></span>
                 <input 
                     type="text"
                     name="search"

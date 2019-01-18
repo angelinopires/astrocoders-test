@@ -15,13 +15,12 @@ export default function App() {
         let hashtag = 'mars'
         let count = 40
 
-        const result = await axios(
+        await axios(
             `http://localhost:3000/api/search/${hashtag}&${count}`
         )
         .then((response) => {
             setTweets(response.data.statuses)
             setFilter(response.data.statuses)
-            console.log(response.data.statuses)
         })
         .then(() => setLoader(false))
         .catch(error => console.log(error))
@@ -45,7 +44,7 @@ export default function App() {
 
     return (
         <section id="gmail">
-            <Header handleSearch={handleSearch} />
+            <Header handleSearch={handleSearch}/>
             <Menu />
             {loading 
                 ? <figure className="loading"><img src="img/loading.gif"/></figure> 

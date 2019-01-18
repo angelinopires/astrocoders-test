@@ -55,21 +55,167 @@ html {
   color: #fff;
   scroll-behavior: smooth; }
 
-.container {
-  padding: 1rem 1rem; }
+.loading {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; }
+
+@media only screen and (min-width: 992px) {
+  .loading {
+    width: 80%;
+    margin-left: 20%; } }
+
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  padding: 10px;
+  color: #000;
+  background-color: #eee;
+  z-index: 2; }
+  .header fieldset {
+    padding: 10px;
+    width: 100%; }
+    .header fieldset img {
+      position: absolute;
+      width: 30px;
+      bottom: 17px;
+      margin-left: 5px; }
+  .header__input {
+    width: 100%;
+    height: 35px;
+    padding-left: 40px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 7px;
+    transition: .1s all ease-in; }
+    .header__input:hover, .header__input:focus {
+      outline: none;
+      background-color: #f7df1e; }
+      .header__input:hover::-webkit-input-placeholder, .header__input:focus::-webkit-input-placeholder {
+        color: #000; }
+      .header__input:hover:-ms-input-placeholder, .header__input:focus:-ms-input-placeholder {
+        color: #000; }
+      .header__input:hover::-ms-input-placeholder, .header__input:focus::-ms-input-placeholder {
+        color: #000; }
+      .header__input:hover::placeholder, .header__input:focus::placeholder {
+        color: #000; }
+
+@media only screen and (min-width: 576px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px; }
+    .header__input {
+      width: 300px; }
+    .header fieldset {
+      width: auto; }
+      .header fieldset img {
+        bottom: 20px; } }
+
+@media only screen and (min-width: 768px) {
+  .header {
+    justify-content: space-between; } }
+
+@media only screen and (min-width: 992px) {
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 0.5px solid #eee; }
+    .header__input {
+      background-color: #eee; } }
+
+.menu {
+  display: none;
+  width: 20%;
+  min-height: calc(100vh - 70px);
+  margin-top: 70px;
+  background: #E0E0E0; }
+  .menu__title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold; }
+  .menu__list {
+    margin-top: 2rem;
+    color: #000; }
+  .menu__item {
+    max-width: 220px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0 5px 10px;
+    margin: 0 auto 7px auto;
+    border-radius: 0px 15px 15px 0px;
+    transition: .2s ease-in-out; }
+    .menu__item--icon {
+      width: 30px;
+      margin-right: 10px; }
+    .menu__item.active {
+      background-color: #f7df1e;
+      font-weight: bold; }
+    .menu__item:hover {
+      background-color: #f7df1e;
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+      border-color: #000; }
+
+@media only screen and (min-width: 992px) {
+  .menu {
+    display: block; } }
 
 #gmail {
   display: flex;
   flex-wrap: wrap; }
-  #gmail aside {
-    background-color: purple;
-    color: white;
-    width: 15vw; }
-  #gmail .header {
+
+.tweet {
+  margin-top: 110px; }
+  .tweet__list {
+    display: flex;
+    flex-direction: column; }
+  .tweet__text {
     width: 100%;
-    background-color: yellow; }
-  #gmail .emails {
-    background-color: blueviolet;
-    width: calc(100% - 15vw);
-    height: 50vh; }
+    padding: 1rem 10px;
+    font-size: 1rem;
+    color: #000;
+    box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
+    transition: .15s all ease-in-out; }
+    .tweet__text:hover {
+      z-index: 1;
+      box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15); }
+  .tweet__user {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 7px; }
+  .tweet__message {
+    padding: 7px 0;
+    font-size: 0.8rem; }
+  .tweet__time, .tweet__location {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 7px; }
+
+@media only screen and (min-width: 576px) {
+  .tweet {
+    margin-top: 70px; } }
+
+@media only screen and (min-width: 992px) {
+  .tweet {
+    width: 80%; }
+    .tweet__list {
+      max-height: 90vh;
+      overflow-y: scroll;
+      margin-top: 0; }
+    .tweet__time, .tweet__user, .tweet__location, .tweet__message {
+      width: 100%;
+      font-size: 0.9rem; }
+    .tweet__user, .tweet__location {
+      margin-bottom: 10px; } }
 
